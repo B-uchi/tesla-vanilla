@@ -1,0 +1,198 @@
+@import url('https://fonts.cdnfonts.com/css/gotham-ssm?styles=114479');
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    overflow-y: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.main-container{
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+}
+section{
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+@font-face{
+    font-family: gotham;
+    src: url('./../assets/font/GothamSSm.ttf')
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}
+#logo{
+    width: 8em;
+}
+.nav-left{
+    margin-left: 20px;
+}
+.nav-right{
+    margin-right: -20px;
+}
+.nav-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    display: flex;
+    list-style: none;
+}
+li{
+    padding: 7px 10px;
+    font-weight: 100;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Gotham SSM', sans-serif;
+}
+li:hover{
+    background-color: #f4f4f4cc;
+    transition: .2s ease-in;
+}
+.one{
+    background-image: url(../assets/images/1.webp);
+}
+.two{
+    
+    background-image: url(../assets/images/2.webp);
+}
+.three{
+    
+    background-image: url(../assets/images/3.webp);
+}
+.four{
+    
+    background-image: url(../assets/images/4.webp);
+}
+.five{
+    
+    background-image: url(../assets/images/5.webp);
+}
+.six{
+    
+    background-image: url(../assets/images/6.webp);
+}
+.seven{
+    
+    background-image: url(../assets/images/7.webp);
+}
+.img{
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+}
+.first-top{
+    position: absolute;
+    margin-top: 80px;
+    text-align: center;
+}
+.first-top h3{
+    font-size: 48px;
+    font-family: gotham;
+    margin-bottom: 3px;
+}
+.first-top p, .first-top a{
+    
+    font-family: gotham;
+    color: #171a20;
+}
+.first-bottom{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    bottom: 20px;
+    width: 40em;
+    gap: 25px;
+}
+.button-container{
+    display: flex;
+    position: absolute;
+    bottom: 40px;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.footer-links{
+
+    gap: 20px;
+}
+.footer-links a{
+    text-decoration: none;
+    margin-left: 3px;
+    margin-right: 3px;
+    color: #5c5e62;
+    font-family: 'Gotham SSM', sans-serif;
+    font-size: 12px;
+}
+.button-container button{
+    font-family: 'Gotham SSM', sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    color: #5c5e62;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    width: 42%;
+    padding: 10px;
+}
+.button-container button:hover{
+    transform: scale(1.05);
+    transition: .2s ease-out;
+}
+#order{
+    background-color: #5c5e62;
+    color: white;
+}
+#last-line{
+    margin-top: 5px;
+}
+small{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width:425px){
+    .button-container{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .first-bottom{
+        width: 100%;
+    }
+    small{
+        width: 80%;
+        line-height: 1.3em;
+        text-align: center;
+    }
+    .button-container button{
+        width: 75%;
+    }
+    .footer-links{
+        padding: 10px;
+    }
+}
